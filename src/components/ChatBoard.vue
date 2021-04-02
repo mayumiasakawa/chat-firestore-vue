@@ -15,6 +15,7 @@
         </v-list-item-subtitle>
         <v-list-item-subtitle>
           {{ comment.createdAt.toDate().toLocaleString() }}
+          <v-icon color="red" @click="deleteComment(comment.id)" small>delate</v-icon>
         </v-list-item-subtitle>
       </v-list-item-content>
 
@@ -39,6 +40,14 @@
         //firestoreのcommentsコレクションを参照
         comments: db.collection('comments').orderBy('createdAt', 'desc')
       }
+    },
+    methods: {
+      deleteComment(id){
+        if (!confirm('コメントを削除してよろしいですか？')) {
+          return
+        }
+        db.collection('comments').doc(id).delete()
+      },
     },
   }
 </script>
