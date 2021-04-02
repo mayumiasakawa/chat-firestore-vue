@@ -37,7 +37,7 @@
     firestore() {
       return {
         //firestoreのcommentsコレクションを参照
-        comments: db.collection('comments').orderBy('createdAt')
+        comments: db.collection('comments').orderBy('createdAt', 'desc')
       }
     },
   }
