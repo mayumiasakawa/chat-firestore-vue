@@ -11,7 +11,7 @@
 
       <v-list-item-content>
         <v-list-item-subtitle class="text--primary subheadeing">
-          {{ comment.comment }}
+          {{ comment.content }}
         </v-list-item-subtitle>
         <v-list-item-subtitle>
           {{ comment.createdAt.toDate().toLocaleString() }}

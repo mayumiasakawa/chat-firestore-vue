@@ -7,13 +7,11 @@
 </template>
 
 <script>
-import ChatBoard from './components/ChatBoard';
-
-export default {
-  name: 'App',
-
-  components: {
-    ChatBoard,
-  },
-};
+  import ChatBoard from './components/ChatBoard'
+  export default {
+    name: 'App',
+    components: {
+      ChatBoard
+    },
+  }
 </script>
