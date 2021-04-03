@@ -1,20 +1,20 @@
 <template>
   <v-app>
     <v-container>
+      <ChatForm/>
       <ChatBoard/>
-      <Form/>
     </v-container>
   </v-app>
 </template>
 
 <script>
   import ChatBoard from './components/ChatBoard'
-  import Form from './components/Form'
+  import ChatForm from './components/Form'
   export default {
     name: 'App',
     components: {
       ChatBoard,
-      Form
+      ChatForm
     },
   }
 </script>
